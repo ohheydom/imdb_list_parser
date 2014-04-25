@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 1.3'
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rspec', '~> 2.14.1'
-  spec.add_development_dependency 'nokogiri', '~> 1.6.1'
+  spec.add_dependency 'nokogiri', '~> 1.6.1'
   spec.add_development_dependency 'vcr', '~> 2.9.0'
   spec.add_development_dependency 'webmock', '~> 1.17.4'
 end
