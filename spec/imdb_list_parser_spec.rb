@@ -1,11 +1,11 @@
 require 'vcr'
-require_relative '../imdb_parser'
 require 'webmock/rspec'
 require_relative 'support/vcr_setup'
+require 'imdb_list_parser'
 
-describe ImdbParser do
+describe ImdbListParser do
   describe 'Top250' do
-    imdb_list = ImdbParser::Top250
+    imdb_list = ImdbListParser::Top250
     describe '#movies' do
       it 'displays an array of all the movies in the list' do
         VCR.use_cassette('imdb_top_250') do
@@ -72,7 +72,7 @@ describe ImdbParser do
   end
 
   describe 'Bottom 100' do
-    imdb_list = ImdbParser::Bottom100
+    imdb_list = ImdbListParser::Bottom100
 
     describe '#display with years' do
       it 'returns an array of arrays with the movie and year' do
