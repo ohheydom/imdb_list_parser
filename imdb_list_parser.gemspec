@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['ohheydom@gmail.com']
   spec.description   = ImdbListParser::DESCRIPTION 
   spec.summary       = ImdbListParser::DESCRIPTION
-  spec.homepage      = ''
+  spec.homepage      = 'https://github.com/ohheydom/imdb_list_parser'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
