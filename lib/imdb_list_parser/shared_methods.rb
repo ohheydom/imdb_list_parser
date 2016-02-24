@@ -1,7 +1,7 @@
 module ImdbListParser
   module SharedMethods
     def movies
-      @movies ||= elements.inject([]) { |acc, html| acc << html.elements[1].elements[1].inner_text }
+      @movies ||= elements.inject([]) { |acc, html| acc << html.elements[1].elements[0].child.inner_text }
     end
 
     def display(*options)
@@ -26,11 +26,11 @@ module ImdbListParser
     end
 
     def years
-      @years ||= elements.inject([]) { |acc, html| acc << html.elements[1].elements[2].inner_text[/\d+/] }
+      @years ||= elements.inject([]) { |acc, html| acc << html.elements[1].elements[1].children.inner_text[/\d+/] }
     end
 
     def ratings
-      @ratings ||= elements.inject([]) { |acc, html| acc << html.elements[2].elements.inner_text }
+      @ratings ||= elements.inject([]) { |acc, html| acc << html.elements[2].children.children.inner_text }
     end
 
     def valid_methods(arr)
