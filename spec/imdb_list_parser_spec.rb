@@ -77,7 +77,7 @@ describe ImdbListParser do
     describe '#display with years' do
       it 'returns an array of arrays with the movie and year' do
         VCR.use_cassette('imdb_bottom_100') do
-          expect(imdb_list.display(:years)[0]).to eq(['The Hillz', '2004'])
+          expect(imdb_list.display(:years)[0]).to eq(['Code Name: K.O.Z.', '2015'])
         end
       end
     end
@@ -85,7 +85,7 @@ describe ImdbListParser do
     describe '#display with ratings' do
       it 'returns an array of arrays with the movie and rating' do
         VCR.use_cassette('imdb_bottom_100') do
-          expect(imdb_list.display(:ratings)[0]).to eq(['The Hillz', '2.6'])
+          expect(imdb_list.display(:ratings)[0]).to eq(['Code Name: K.O.Z.', '1.5'])
         end
       end
     end
@@ -93,7 +93,7 @@ describe ImdbListParser do
     describe '#display with years and ratings' do
       it 'returns an array of arrays with the movie, year, and rating' do
         VCR.use_cassette('imdb_bottom_100') do
-          expect(imdb_list.display(:years, :ratings)[0]).to eq(['The Hillz', '2004', '2.6'])
+          expect(imdb_list.display(:years, :ratings)[0]).to eq(['Code Name: K.O.Z.', '2015', '1.5'])
         end
       end
     end

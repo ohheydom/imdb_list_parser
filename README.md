@@ -14,7 +14,7 @@ And then execute:
 
 ## Usage
 
-To create an array with the movie titles, simply type
+To create an array with the movie titles of the Top 250 movies, simply type:
 
 ```ruby
 ImdbListParser::Top250.movies
